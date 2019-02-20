@@ -2,8 +2,8 @@
  * GET home page.
  */
 
-exports.view = function(req, res){
-  res.render('index', {
+exports.view = function(request, response){
+  response.render('index', {
 	'projects': [
 		{ 	'name': 'Waiting in Line',
 		    'image': 'lorempixel.people.1.jpeg',

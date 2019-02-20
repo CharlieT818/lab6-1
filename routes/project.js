@@ -1,7 +1,7 @@
 var projects = require('../projects.json');
 
-exports.projectInfo = function(req, res) { 
-	var projectID = req.params.id;
+exports.projectInfo = function(request, response) { 
+	var projectID = request.params.id;
 	if (projectID == "random") {
 		projectID = Math.floor(Math.random() * projects.length) + 1;
 	} else {
@@ -9,5 +9,5 @@ exports.projectInfo = function(req, res) { 
 	}
 
   	var project = projects[projectID-1]; // of by one, our first project has index 0
-  	res.json(project);
+  	response.json(project);
 }
